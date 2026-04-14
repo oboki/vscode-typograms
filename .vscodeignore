@@ -3,6 +3,8 @@
 .github/**
 node_modules/**
 src/**
+scripts/**
 tsconfig.json
+package-lock.json
 **/*.map
 **/*.ts

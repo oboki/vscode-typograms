@@ -5,6 +5,10 @@
   "version": "0.0.1",
   "publisher": "oboki",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oboki/vscode-typograms.git"
+  },
   "icon": "media/typograms-logo.png",
   "engines": {
     "vscode": "^1.95.0"
@@ -38,12 +42,15 @@
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "verify:smoke": "npm run compile && node ./scripts/smoke-test.mjs"
+    "verify:smoke": "npm run compile && node ./scripts/smoke-test.mjs",
+    "package": "npm run compile && vsce package",
+    "publish": "npm run compile && vsce publish"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.15.2",
     "@types/vscode": "^1.95.0",
+    "@vscode/vsce": "^3.7.1",
     "jsdom": "^26.1.0",
     "markdown-it": "^14.1.0",
     "sharp": "^0.34.5",
