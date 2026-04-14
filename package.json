@@ -16,6 +16,14 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "ascii",
+    "diagram",
+    "diagrams",
+    "markdown",
+    "preview",
+    "typograms"
+  ],
   "activationEvents": [
     "onLanguage:markdown",
     "onStartupFinished"
