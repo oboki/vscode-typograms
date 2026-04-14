@@ -14,7 +14,7 @@
     "vscode": "^1.95.0"
   },
   "categories": [
-    "Markdown"
+    "Other"
   ],
   "activationEvents": [
     "onLanguage:markdown",
