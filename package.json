@@ -1,0 +1,52 @@
+{
+  "name": "typograms",
+  "displayName": "typograms",
+  "description": "Render ```typograms fenced code blocks in VS Code Markdown Preview using Google Typograms.",
+  "version": "0.0.1",
+  "publisher": "oboki",
+  "license": "Apache-2.0",
+  "icon": "media/typograms-logo.png",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Markdown"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown",
+    "onStartupFinished"
+  ],
+  "extensionDependencies": [
+    "vscode.markdown-language-features"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": [
+      {
+        "id": "typograms.markdown-it",
+        "entrypoint": "./out/extension.js"
+      }
+    ],
+    "markdown.previewScripts": [
+      "./media/typograms.js",
+      "./media/preview-typograms-adapter.js"
+    ],
+    "markdown.previewStyles": [
+      "./media/typograms.css"
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "verify:smoke": "npm run compile && node ./scripts/smoke-test.mjs"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.15.2",
+    "@types/vscode": "^1.95.0",
+    "jsdom": "^26.1.0",
+    "markdown-it": "^14.1.0",
+    "sharp": "^0.34.5",
+    "typescript": "^5.8.3"
+  }
+}
